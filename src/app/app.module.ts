@@ -4,6 +4,7 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ModuleModule } from './module/module.module';
+import { HomeComponent } from './module/home/home.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { ModuleModule } from './module/module.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ModuleModule
+    ModuleModule,
+    
   ],
   providers: [
     provideClientHydration()
