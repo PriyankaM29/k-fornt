@@ -1,94 +1,73 @@
-/* General styles for the body */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* .body {
+    display: flex;
+    justify-content: flex-end;
     margin: 0;
     padding: 0;
-    background-color: #dfe2e8;
+    height: 100vh;
+    align-items: center;
+}
+.right-div{
+ border-style: outset;
+ border-radius: 30px;
+ border-color: rgb(91, 151, 131);
+ padding: 5px;
+ float: left;
+
 }
 
-/* Navbar container */
-.navbar {
-    background-color: #070606;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 0px;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-.navbar-logo {
-    height: 40px; /* Adjust the height as needed */
-    margin-right: 620px; /* Space between the logo and the navigation items */
-    padding-top: 2px;
-    align-items: left;
-}
-
-/* Navbar list */
-.navbar ul {
-    display: flex;
-    justify-content: center;  /* Center align the items horizontally */
-    list-style-type: none;
+.right-div p{
+    text-align: left;
     margin: 0;
-    padding: 10px 0;
-}
-
-/* Align items to the right of the center */
-.navbar ul::before {
-    content: '';
-    flex: 1;
-}
-
-/* Navbar items */
-.navbar li {
-    margin: 0 15px;
-}
-
-/* Navbar links */
-.navbar a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 10px;
-    display: inline-block;
-    transition: color 0.3s, border-bottom 0.3s;
-    border-radius: 15px;
-}
-
-.navbar a:hover {
-    color: black;
-    background-color: white;
-    border-bottom: 2px solid #0073e6;
-}
-
-/* Active link style */
-.navbar a.active {
-    color: #0073e6;
-    border-bottom: 2px solid #0073e6;
-}
-
-/* Container styling */
-.container {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 0 20px;
-}
-
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-    .navbar ul {
-        flex-direction: column;
-        align-items: center;
-    }
+} */
+ /* body {
+    background-image: cross-fade("assets\images\toolvideo.gif");
     
-    .navbar li {
-        margin: 10px 0;
-    }
+    
+ } */
+/* #box{
+    background-color:rgba(1,57,92,255);
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+} */
+.home-component{
+    position: absolute;
+    top:60px;
+    left: 0px;
+    right: 0px;
+    margin:0px;
+    padding: 20px;
+    bottom: 0px;
+    background-color: rgba(1,57,92,255);
+    /* border: 10px red solid; */
+}
+.back-gif{
+    position:absolute;
+    display:flex; 
+    height: 482px; 
+    margin-right: 300px;
+  
+}
+.container-home {
+    /* display:flex; */
+   /* justify-content: flex-end; /* Align content to the right */
+   font-style:italic;
+   max-width: 400px; /* Set a maximum width for the container */
+   
+   margin-left: 715px; /* Center the container horizontally */
+  
+    
 }
 
-.profile {
-    background-color: white;
-    color: #0073e6;
-    padding: 10px;
-    border-radius: 50%;
+.right-div {
+    height: 450px;
+    width: 350px;
+    text-align: center;
+    word-spacing: 10px;
+    line-height: 25px;
+    background-color: #f9f9f9; /* Optional: Add a background color */
+    padding: 15px 15px 15px 15px;
+    border-radius: 50px;
+    border: 1px solid #315a63; /* Optional: Add a border */
 }
+    
