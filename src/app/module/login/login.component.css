@@ -1,15 +1,18 @@
 
     .login_container {
         max-width: 400px;
-        margin: 0 auto;
-        padding: 20px;
+        margin: auto;
+        padding: 30px;
         border: 1px solid #ccc;
         border-radius: 5px;
         background-color: #f9f9f9;
+        align-items: center;
+        margin-top: 70px;
     }
 
     .form_group {
         margin-bottom: 15px;
+        margin-right: 20px;
     }
 
     label {
