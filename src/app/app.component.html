@@ -1,17 +1,17 @@
 <nav class="navbar">
     <ul>
-        <img src="assets\images\kaplogo.png" alt="Logo" class="navbar-logo">
-        <li><a routerLink="home" routerLinkActive="active">Home</a></li>
-        <li><a routerLink="explore" routerLinkActive="active">Explore</a></li>
-        <li><a routerLink="product" routerLinkActive="active">Cabs</a></li>
-        <li><a routerLink="assist" routerLinkActive="active">Assist</a></li>
-        <li *ngIf="!isLoggedIn"><a routerLink="login" routerLinkActive="active">Log In</a></li>
+       <a routerLink="home" class="home" > <img src="assets\images\kaplogo.png" alt="Logo" class="navbar-logo"> </a>
+       
+        <li><a routerLink="explore" routerLinkActive="active" class="explore">Explore</a></li>
+        
+        <li><a routerLink="assist" routerLinkActive="active" class="explore">Assist</a></li>
+        <li *ngIf="!isLoggedIn"><a routerLink="login" routerLinkActive="active" class="explore">Log In</a></li>
         <li *ngIf="isLoggedIn">
             <button class="profile" (click)="profileButton()">{{capital(user?.firstName)}}</button>
         </li>
     </ul>
 </nav>
-
+ 
 <div class="container">
     <router-outlet></router-outlet>
 </div>

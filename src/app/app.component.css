@@ -16,7 +16,7 @@
 .navbar-logo {
     height: 40px; /* Adjust the height as needed */
     width: 60px;
-    margin-right: 620px; /* Space between the logo and the navigation items */
+    margin-right: 140vh; /* Space between the logo and the navigation items */
     padding-top: 1px;
     align-items: left;
 }
@@ -42,7 +42,7 @@
 }
 
 /* Navbar links */
-.navbar a {
+.explore {
     color: #ffffff;
     text-decoration: none;
     font-size: 16px;
@@ -52,14 +52,14 @@
     border-radius: 15px;
 }
 
-.navbar a:hover {
+.explore:hover {
     color: black;
     background-color: white;
     border-bottom: 2px solid #0073e6;
 }
 
 /* Active link style */
-.navbar a.active {
+.explore{
     color: #1e514c;
     border-bottom: 2px solid #1e514c;
 }
