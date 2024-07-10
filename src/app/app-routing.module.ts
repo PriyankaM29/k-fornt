@@ -6,7 +6,7 @@ import { LoginComponent } from './module/login/login.component';
 
 const routes: Routes = [
   //admin
-  {path:'admin-home',component:AdminComponent},
+  {path:'admin',component:AdminComponent},
 
   //home
   {path:'home',component:HomeComponent},

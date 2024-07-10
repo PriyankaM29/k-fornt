@@ -16,7 +16,7 @@
 .navbar-logo {
     height: 40px; /* Adjust the height as needed */
     width: 60px;
-    margin-right: 140vh; /* Space between the logo and the navigation items */
+    margin-right: 135vh; /* Space between the logo and the navigation items */
     padding-top: 1px;
     align-items: left;
 }
