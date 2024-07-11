@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from '../app-routing.module';
+import { FeaturesComponent } from './features/features.component';
 
 
 
@@ -13,7 +14,8 @@ import { AppRoutingModule } from '../app-routing.module';
   declarations: [
     LoginComponent,
     HomeComponent,
-    AdminComponent
+    AdminComponent,
+    FeaturesComponent
   ],
   imports: [
     CommonModule,
@@ -25,7 +27,8 @@ import { AppRoutingModule } from '../app-routing.module';
   exports:[
     LoginComponent,
     HomeComponent,
-    AdminComponent
+    AdminComponent,
+    FeaturesComponent
   ]
 })
 export class ModuleModule { }
