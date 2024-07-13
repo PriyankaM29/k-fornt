@@ -7,6 +7,10 @@ import { AdminComponent } from './admin/admin.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from '../app-routing.module';
 import { FeaturesComponent } from './features/features.component';
+import { DraganddropComponent } from './draganddrop/draganddrop.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { DragdropService } from '../Service/dragdrop/dragdrop.service';
+// import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 
 
 
@@ -15,20 +19,26 @@ import { FeaturesComponent } from './features/features.component';
     LoginComponent,
     HomeComponent,
     AdminComponent,
-    FeaturesComponent
+    FeaturesComponent,
+    DraganddropComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    DragDropModule
+  
+   
   ],
   exports:[
     LoginComponent,
     HomeComponent,
     AdminComponent,
-    FeaturesComponent
-  ]
+    FeaturesComponent,
+    DraganddropComponent
+  ],
+  providers:[DragdropService]
 })
 export class ModuleModule { }

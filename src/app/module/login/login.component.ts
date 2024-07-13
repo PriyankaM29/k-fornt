@@ -15,8 +15,8 @@ user:User=new User();
  onSubmit(form:NgForm){
   this.userService.loginUser(this.user).subscribe(
     data=>{
-
-
+ 
+ 
     if(this.user.email==='super@gmail.com' && this.user.password==='asd'){
       this.router.navigate(['/admin']);
     }
@@ -29,13 +29,13 @@ user:User=new User();
     this.userService.setLoggedIn(true);
    
   },
-
+ 
   error=>{
 alert("UserName or Password is invalid");
   }
   )
-  
-
+ 
+ 
  };
 
 }

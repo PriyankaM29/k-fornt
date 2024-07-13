@@ -1,25 +1,29 @@
-<div cdkDropListGroup>
-    <div class="example-container">
-      <h2>To do</h2>
-  
-      <div
-        cdkDropList
-        [cdkDropListData]="todo"
-        class="example-list"
-        (cdkDropListDropped)="drop($event)">
-        <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+<div class="login_container" style="background-color: aliceblue;">
+  <h1>Add Feature</h1>
+  <form (ngSubmit)="onSubmit(form)" #form="ngForm" class="feature_form">
+      <div class="form_group">
+          <label for="type">Feature Type</label>
+          <input type="type" id="type" name="type" [(ngModel)]="feature.type" required>
       </div>
-    </div>
-  
-    <div class="example-container">
-      <h2>Done</h2>
-  
-      <div
-        cdkDropList
-        [cdkDropListData]="done"
-        class="example-list"
-        (cdkDropListDropped)="drop($event)">
-        <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+      <div class="form_group">
+          <label for="filedAgainst">Filed Against</label>
+          <input type="filedAgainst" id="filedAgainst" name="filedAgainst"[(ngModel)]="feature.filedAgainst" required>
       </div>
+      <div class="form_group">
+        <label for="createdBy">Created By</label>
+        <input type="createdBy" id="createdBy" name="createdBy"[(ngModel)]="feature.createdBy" required>
     </div>
+    <div class="form_group">
+      <label for="description">Description</label>
+      <input type="description" id="description" name="description"[(ngModel)]="feature.description" required>
   </div>
+  <div class="form_group">
+    <label for="plannedFor">Planned For</label>
+    <input type="plannedFor" id="plannedFor" name="plannedFor"[(ngModel)]="feature.plannedFor" required>
+</div>
+      <div class="form_action">
+          <button class="btn" type="submit" [disabled]="form.invalid">Submit</button>
+      </div>
+
+  </form>   
+</div>

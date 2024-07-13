@@ -1,0 +1,21 @@
+.container {
+    width: 30%;
+    margin: 0 10px;
+    display: inline-block;
+    vertical-align: top;
+  }
+   
+  .list {
+    border: 1px solid #ccc;
+    min-height: 300px;
+    padding: 10px;
+    background: #f9f9f9;
+  }
+   
+  .item {
+    padding: 10px;
+    margin-bottom: 5px;
+    background: #fff;
+    border: 1px solid #ccc;
+    cursor: move;
+  }

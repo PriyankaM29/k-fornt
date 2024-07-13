@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './module/admin/admin.component';
 import { HomeComponent } from './module/home/home.component';
 import { LoginComponent } from './module/login/login.component';
+import { FeaturesComponent } from './module/features/features.component';
+import { DraganddropComponent } from './module/draganddrop/draganddrop.component';
 
 const routes: Routes = [
   //admin
@@ -13,6 +15,7 @@ const routes: Routes = [
 
   //login
   {path:'login',component:LoginComponent},
+  {path:'dragdrop',component:DraganddropComponent},
 
   {path: '', redirectTo: 'home', pathMatch: 'full'},
 ];

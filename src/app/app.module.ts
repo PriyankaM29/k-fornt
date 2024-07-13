@@ -15,6 +15,7 @@ import { HomeComponent } from './module/home/home.component';
     BrowserModule,
     AppRoutingModule,
     ModuleModule,
+
     
   ],
   providers: [
