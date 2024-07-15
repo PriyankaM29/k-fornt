@@ -1,21 +1,30 @@
 <div cdkDropListGroup>
   <div class="container">
     <h3>Product Backlog</h3>
-    <div cdkDropList [cdkDropListData]="productBacklog" class="list" (cdkDropListDropped)="drop($event, 'pending')">
+    <div cdkDropList 
+    [cdkDropListData]="productBacklog" 
+    class="list" 
+    (cdkDropListDropped)="drop($event, 'pending')">
       <div class="item" *ngFor="let feature of productBacklog" cdkDrag>{{feature.description}}|{{feature.featureId}}</div>
     </div>
   </div>
  
   <div class="container">
     <h3>Sprint 1</h3>
-    <div cdkDropList [cdkDropListData]="sprint1" class="list" (cdkDropListDropped)="drop($event, 'sprint 1')">
+    <div cdkDropList 
+    [cdkDropListData]="sprint1" 
+    class="list" 
+    (cdkDropListDropped)="drop($event, 'sprint 1')">
       <div class="item" *ngFor="let feature of sprint1" cdkDrag>{{feature.description}}|{{feature.featureId}}</div>
     </div>
   </div>
  
   <div class="container">
     <h3>Sprint 2</h3>
-    <div cdkDropList [cdkDropListData]="sprint2" class="list" (cdkDropListDropped)="drop($event, 'sprint 2')">
+    <div cdkDropList 
+    [cdkDropListData]="sprint2" 
+    class="list" 
+    (cdkDropListDropped)="drop($event, 'sprint 2')">
       <div class="item" *ngFor="let feature of sprint2" cdkDrag>{{feature.description}}|{{feature.featureId}}</div>
     </div>
   </div>
