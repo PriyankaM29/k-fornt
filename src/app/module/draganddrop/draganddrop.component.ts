@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 import { Feature } from '../../Class/Feature/feature';
 import { DragdropService } from '../../Service/dragdrop/dragdrop.service';
+import { ok } from 'node:assert';
+import { stringify } from 'node:querystring';
 
 @Component({
   selector: 'app-draganddrop',
@@ -32,6 +34,11 @@ export class DraganddropComponent implements OnInit{
   }
 
   drop(event: CdkDragDrop<Feature[]>, container: string) {
+    // console.log(event.previousContainer:stringify);
+    // console.log(event.container);
+    // console.log(event.currentIndex);
+    // console.log(event.previousIndex);
+    // console.log(event.container.data);
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {
@@ -51,5 +58,6 @@ this.updateFeaturePlannedFor(feature.featureId, container);
     console.log(id);
     this.featureService.updateFeaturePlannedFor(id, plannedFor).subscribe();
   }
+  
 
 }
