@@ -5,6 +5,7 @@ import { HomeComponent } from './module/home/home.component';
 import { LoginComponent } from './module/login/login.component';
 import { FeaturesComponent } from './module/features/features.component';
 import { DraganddropComponent } from './module/draganddrop/draganddrop.component';
+import { FeatureDashboardComponent } from './module/feature-dashboard/feature-dashboard.component';
 
 const routes: Routes = [
   //admin
@@ -16,6 +17,7 @@ const routes: Routes = [
   //login
   {path:'login',component:LoginComponent},
   {path:'dragdrop',component:DraganddropComponent},
+  {path:'featureDashboard/:id',component:FeatureDashboardComponent},
 
   {path: '', redirectTo: 'home', pathMatch: 'full'},
 ];

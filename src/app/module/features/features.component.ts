@@ -21,7 +21,12 @@ feature:Feature=new Feature();
   this.featureService.addFeature(this.feature).subscribe(response=>
     {
       console.log("response from backend",response);
-    });
+    }, error => {
+      console.error('Error submitting feature', error);
+    }
+  );
+
+  this.router.navigate(['/featureDashboard',this.feature.featureId]);
 }
 
 }
