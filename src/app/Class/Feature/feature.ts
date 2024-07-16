@@ -4,6 +4,6 @@ export class Feature {
     filedAgainst!:string;
     createdBy!:string;
     description!:string;
-    createdDate!:Date
+    createdDate!:Date;
     plannedFor!:string;
 }

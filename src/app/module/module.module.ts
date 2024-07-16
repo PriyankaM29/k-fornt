@@ -10,6 +10,7 @@ import { FeaturesComponent } from './features/features.component';
 import { DraganddropComponent } from './draganddrop/draganddrop.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { DragdropService } from '../Service/dragdrop/dragdrop.service';
+import { AddEpicComponent } from './add-epic/add-epic.component';
 // import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 
 
@@ -20,7 +21,8 @@ import { DragdropService } from '../Service/dragdrop/dragdrop.service';
     HomeComponent,
     AdminComponent,
     FeaturesComponent,
-    DraganddropComponent
+    DraganddropComponent,
+    AddEpicComponent
   ],
   imports: [
     CommonModule,

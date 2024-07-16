@@ -1,0 +1,25 @@
+<div class="login_container" style="background-color: aliceblue;">
+    <h1>Add Feature</h1>
+    <form (ngSubmit)="onSubmit(form)" #form="ngForm" class="epic_form">
+       
+        <div class="form_group">
+            <label for="filedAgainst">Filed Against</label>
+            <input type="filedAgainst" id="filedAgainst" name="filedAgainst"[(ngModel)]="epic.filedAgainst" required>
+        </div>
+        <div class="form_group">
+          <label for="ownedBy">Owned By</label>
+          <input type="ownedBy" id="ownedBy" name="ownedBy"[(ngModel)]="epic.ownedBy" required>
+      </div>
+      <div class="form_group">
+        <label for="description">Description</label>
+        <input type="description" id="description" name="description"[(ngModel)]="epic.description" required>
+    </div>
+    <div class="form_group">
+      <label for="dueDate">Due Date</label>
+      <input type="dueDate" id="dueDate" name="dueDate"[(ngModel)]="epic.dueDate" required>
+  </div>
+        <div class="form_action">
+            <button class="btn" type="submit" [disabled]="form.invalid">Submit</button>
+        </div>
+    </form>   
+  </div>
