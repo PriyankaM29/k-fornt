@@ -9,9 +9,13 @@ import { Observable } from 'rxjs';
 export class EpicService {
 
   baseURL="http://localhost:8080/kap/"
+<<<<<<< HEAD
   constructor(private httpClient:HttpClient) { }
+=======
+  constructor(private httpclient:HttpClient) { }
+>>>>>>> 388ac7f992b205f9b48b08faca4767ffa7fff91c
 
   addFeature(epic:Epic):Observable<any>{
-    return this.httpClient.post(`${this.baseURL}`,epic);
+    return this.httpclient.post(`${this.baseURL}`,epic);
   }
 }

@@ -4,7 +4,11 @@
        
         <li><a routerLink="explore" routerLinkActive="active" class="explore">Explore</a></li>
         
+<<<<<<< HEAD
         <li><a routerLink="featureDashboard" routerLinkActive="active" class="explore">Assist</a></li>
+=======
+        <li><a routerLink="dragdrop" routerLinkActive="active" class="explore">Sprints</a></li>
+>>>>>>> 388ac7f992b205f9b48b08faca4767ffa7fff91c
         <li *ngIf="!isLoggedIn"><a routerLink="login" routerLinkActive="active" class="explore">Log In</a></li>
         <li *ngIf="isLoggedIn">
             <button class="profile" (click)="profileButton()">{{capital(user?.firstName)}}</button>
