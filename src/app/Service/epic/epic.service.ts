@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class EpicService {
 
   baseURL="http://localhost:8080/kap/"
-  constructor(httpclint:HttpClient) { }
+  constructor(private httpClient:HttpClient) { }
 
   addFeature(epic:Epic):Observable<any>{
     return this.httpClient.post(`${this.baseURL}`,epic);
