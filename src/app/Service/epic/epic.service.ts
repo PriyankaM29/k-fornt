@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class EpicService {
 
+<<<<<<< Updated upstream
   baseURL="http://localhost:8080/kap/"
 <<<<<<< HEAD
   constructor(private httpClient:HttpClient) { }
@@ -17,5 +18,14 @@ export class EpicService {
 
   addFeature(epic:Epic):Observable<any>{
     return this.httpclient.post(`${this.baseURL}`,epic);
+=======
+  private baseURL="http://localhost:8080/kap/addEpic"
+  
+  constructor(private httpClient: HttpClient) { }
+  addEpic(epic:Epic):Observable<any>{
+    return this.httpClient.post(`${this.baseURL}`,epic);
+>>>>>>> Stashed changes
   }
+
+  
 }

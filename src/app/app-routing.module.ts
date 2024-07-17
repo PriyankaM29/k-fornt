@@ -16,10 +16,15 @@ const routes: Routes = [
 
   //login
   {path:'login',component:LoginComponent},
+  //drag
   {path:'dragdrop',component:DraganddropComponent},
   {path:'featureDashboard',component:FeatureDashboardComponent},
 
+  //featureForm
+  {path:'featureForm',component:FeaturesComponent},
+
   {path: '', redirectTo: 'home', pathMatch: 'full'},
+ 
 ];
 
 @NgModule({

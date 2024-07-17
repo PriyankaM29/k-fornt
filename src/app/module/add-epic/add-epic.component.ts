@@ -14,8 +14,14 @@ export class AddEpicComponent {
   constructor(private epicService:EpicService,private router:Router){}
 
   onSubmit(form:NgForm){
-    const epic=form.value;
-    this.router.navigate(["/feature"]);
+    const featureId= {
+      
+    }
+    this.epic=form.value;
+    this.epicService.addEpic(this.epic).subscribe(response=>
+      {
+        console.log("response from backend",response);
+      });
   }
 
 }
