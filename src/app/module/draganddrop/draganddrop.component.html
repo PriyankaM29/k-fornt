@@ -1,6 +1,8 @@
 <div cdkDropListGroup>
   <div class="container">
-    <h3>Product Backlog</h3><button class="btn" (click)="addButton()" >+</button>
+    <div >
+    <h3>Product Backlog</h3>
+    </div>
     <div cdkDropList 
     [cdkDropListData]="productBacklog" 
     class="list" 
@@ -29,4 +31,8 @@
       <div class="item" *ngFor="let feature of sprint2" cdkDrag>{{feature.featureId}}. {{feature.description}}</div>
     </div>
   </div>
+</div>
+<div>
+  <button type="button" class="btn btn-primary btn-lg" routerLink="/featureForm" (click)="addButton()">ADD FEATURE</button>
+
 </div>

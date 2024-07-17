@@ -25,7 +25,7 @@ const routes: Routes = [
   // add epic
   {path:'addEpic',component:AddEpicComponent},
 
-  {path:'featureFrom',component:FeatureDashboardComponent},
+  {path:'featureFrom',component:FeaturesComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
  
 ];

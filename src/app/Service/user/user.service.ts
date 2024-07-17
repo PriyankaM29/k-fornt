@@ -18,6 +18,7 @@ export class UserService {
  
  
   loginUser(user:User):Observable<any>{
+    console.log(user);
     return this.httpClient.post(`${this.baseURL2}`,user);
   }
  
