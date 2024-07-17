@@ -4,6 +4,7 @@ import { Feature } from '../../Class/Feature/feature';
 import { DragdropService } from '../../Service/dragdrop/dragdrop.service';
 import { ok } from 'node:assert';
 import { stringify } from 'node:querystring';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-draganddrop',
@@ -15,14 +16,18 @@ export class DraganddropComponent implements OnInit{
   sprint1: Feature[] = [];
   sprint2: Feature[] = [];
 
-  constructor(private featureService: DragdropService) { }
+  constructor(private router:Router,private featureService: DragdropService) { }
 
   ngOnInit(): void {
-    this.featureService.getFeatures().subscribe(data=>
-      {
-        console.log(data);
-      })
+    // this.featureService.getFeatures().subscribe(data=>
+    //   {
+    //     console.log(data);
+    //   })
     this.fetchFeatures();
+  }
+  addButton() {
+    alert("add feature")
+    this.router.navigate(['/featureForm']);
   }
 
   fetchFeatures() {
@@ -50,7 +55,7 @@ this.updateFeaturePlannedFor(feature.featureId, container);
   }
 
   updateFeaturePlannedFor(id: number, plannedFor: string) {
-    console.log(id);
+    //console.log(id);
     this.featureService.updateFeaturePlannedFor(id, plannedFor).subscribe();
   }
   

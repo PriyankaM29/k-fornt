@@ -1,5 +1,5 @@
 <div class="login_container" style="background-color: aliceblue;">
-    <h1>Add Feature</h1>
+    <h1>Add Epics</h1>
     <form (ngSubmit)="onSubmit(form)" #form="ngForm" class="epic_form">
        
         <div class="form_group">
@@ -7,7 +7,7 @@
             <input type="filedAgainst" id="filedAgainst" name="filedAgainst"[(ngModel)]="epic.filedAgainst" required>
         </div>
         <div class="form_group">
-          <label for="ownedBy">Owned By</label>
+           <label for="ownedBy">Owned By</label>
           <input type="ownedBy" id="ownedBy" name="ownedBy"[(ngModel)]="epic.ownedBy" required>
       </div>
       <div class="form_group">
