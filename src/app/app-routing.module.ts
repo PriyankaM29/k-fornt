@@ -6,6 +6,8 @@ import { LoginComponent } from './module/login/login.component';
 import { FeaturesComponent } from './module/features/features.component';
 import { DraganddropComponent } from './module/draganddrop/draganddrop.component';
 import { FeatureDashboardComponent } from './module/feature-dashboard/feature-dashboard.component';
+import { AddEpicComponent } from './module/add-epic/add-epic.component';
+import { features } from 'process';
 
 const routes: Routes = [
   //admin
@@ -16,14 +18,14 @@ const routes: Routes = [
 
   //login
   {path:'login',component:LoginComponent},
-  //drag
+  //drag and drop
   {path:'dragdrop',component:DraganddropComponent},
-  {path:'feature_form',component:FeaturesComponent},
+  //feature dashboard
   {path:'featureDashboard',component:FeatureDashboardComponent},
+  // add epic
+  {path:'addEpic',component:AddEpicComponent},
 
-  //featureForm
-  {path:'featureForm',component:FeaturesComponent},
-
+  {path:'featureFrom',component:FeatureDashboardComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
  
 ];

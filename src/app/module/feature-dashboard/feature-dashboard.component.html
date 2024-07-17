@@ -3,8 +3,42 @@
 <div>
     <h1>featureDashboard</h1>
     <div class="tab" *ngFor="let feature of features">
-        {{feature.description}}||{{feature.featureId}}
-        
+        {{feature.featureId}} 
+        <br>  
+        {{feature.description}} 
+        <div class="but"> 
+            <button class="button" 
+            routerLink="/addEpic" onclick="addEpic()">
+            ADD EPIC</button>
+        </div>
       </div>
-      <button class="tab" onclick="addEpic">ADD EPIC</button>
-</div>
+      </div>
+<!-- </div>/* app.component.css */
+
+/* Style for the container */
+/* 
+
+/* Style for individual tabs */
+/* .tab {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+
+/* Style for the button 
+.button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+
+}   -->

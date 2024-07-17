@@ -2,6 +2,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Feature } from '../../Class/Feature/feature';
 import { FeatureDashboardService } from '../../Service/feature-dashboard/feature-dashboard.service';
+import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -13,7 +15,7 @@ import { FeatureDashboardService } from '../../Service/feature-dashboard/feature
 export class FeatureDashboardComponent implements OnInit{
   features: Feature[] = [];
 
-  constructor(private featureService:FeatureDashboardService ) { }
+  constructor(private router:Router,private featureService:FeatureDashboardService ) { }
 
   ngOnInit(): void {
     this.featureService.getFeatures().subscribe(data=>
@@ -22,11 +24,12 @@ export class FeatureDashboardComponent implements OnInit{
       })
     this.fetchFeatures();
   }
-
   fetchFeatures() {
-    this.featureService.getFeatures().subscribe((features: Feature[]) => {
-      this.features = features.filter(feature => feature.featureId);
+    this.featureService.getFeatures().subscribe((data) => {
+      this.features = data;
     });
-    
+  }
+  addEpic(){
+    this.router.navigate(['/addEpic']);
   }
 }
