@@ -34,11 +34,6 @@ export class DraganddropComponent implements OnInit{
   }
 
   drop(event: CdkDragDrop<Feature[]>, container: string) {
-    // console.log(event.previousContainer:stringify);
-    // console.log(event.container);
-    // console.log(event.currentIndex);
-    // console.log(event.previousIndex);
-    // console.log(event.container.data);
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {

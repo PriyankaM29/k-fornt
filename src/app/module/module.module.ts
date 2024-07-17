@@ -12,6 +12,10 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { DragdropService } from '../Service/dragdrop/dragdrop.service';
 import { AddEpicComponent } from './add-epic/add-epic.component';
 import { FeatureDashboardComponent } from './feature-dashboard/feature-dashboard.component';
+
+
+import { FeatureDashboardService } from '../Service/feature-dashboard/feature-dashboard.service';
+
 // import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 
 
@@ -41,8 +45,9 @@ import { FeatureDashboardComponent } from './feature-dashboard/feature-dashboard
     HomeComponent,
     AdminComponent,
     FeaturesComponent,
-    DraganddropComponent
+    DraganddropComponent,
+    FeatureDashboardComponent
   ],
-  providers:[DragdropService]
+  providers:[DragdropService,FeatureDashboardService]
 })
 export class ModuleModule { }

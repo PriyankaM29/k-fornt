@@ -16,7 +16,7 @@ export class FeaturesComponent {
 constructor(private router : Router, private featureService : FeatureService) {}
 feature:Feature=new Feature();
  onSubmit(form:NgForm){
-  console.log(form.value)
+  // console.log(form.value)
   this.feature=form.value;
   this.featureService.addFeature(this.feature).subscribe(response=>
     {
@@ -26,7 +26,7 @@ feature:Feature=new Feature();
     }
   );
 
-  this.router.navigate(['/featureDashboard',this.feature.featureId]);
+  this.router.navigate(['/featureDashboard']);
 }
 
 }

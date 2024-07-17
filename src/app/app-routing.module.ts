@@ -17,7 +17,8 @@ const routes: Routes = [
   //login
   {path:'login',component:LoginComponent},
   {path:'dragdrop',component:DraganddropComponent},
-  {path:'featureDashboard/:id',component:FeatureDashboardComponent},
+  {path:'feature_form',component:FeaturesComponent},
+  {path:'featureDashboard',component:FeatureDashboardComponent},
 
   {path: '', redirectTo: 'home', pathMatch: 'full'},
 ];
