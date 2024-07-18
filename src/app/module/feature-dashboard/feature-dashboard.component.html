@@ -1,14 +1,14 @@
 
 
 <div>
-    <h1>featureDashboard</h1>
+    <h1 style="font-family: Georgia, 'Times New Roman', Times, serif; text-align: center;">Feature Dashboard</h1>
     <div class="tab" *ngFor="let feature of features">
         {{feature.featureId}} 
         <br>  
         {{feature.description}} 
         <div class="but"> 
             <button class="button" 
-            routerLink="/addEpic" onclick="addEpic()">
+         (click)="addEpic(feature.featureId)">
             ADD EPIC</button>
         </div>
       </div>

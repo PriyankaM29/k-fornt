@@ -29,7 +29,9 @@ export class FeatureDashboardComponent implements OnInit{
       this.features = data;
     });
   }
-  addEpic(){
+  addEpic(id:number){
+    console.log(id);
+    this.featureService.set_id(id);
     this.router.navigate(['/addEpic']);
   }
 }

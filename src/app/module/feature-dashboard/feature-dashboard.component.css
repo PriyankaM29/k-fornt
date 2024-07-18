@@ -6,28 +6,28 @@
   background-color: #f9f9f9;
 }
 .tab {
-  border: 1px solid #436b74;
+  border: 1px solid #bae2eb;
   background-color:#aad1d9;
-  width: 100%;
+  width:100%;
   height: 90px;
   margin-bottom: 50px;
-  padding: 10px;
+  padding: 20px;
   
 }
 .button {
 
   display: flex;
   position:relative;
-  background-color: #5f8a91;
+  background-color: #b3e5ec;
   color: black;
   padding: 10px 10px 10px 10px;
   width: auto;
   height: auto;
-  border:#75dcf1;
+  border:#4e6368;
   outline:auto;
   margin-left: 80%;
   bottom: 50px;
-  left: 150px;
+  left: 140px;
   cursor: pointer;
   transition: 0.3s;
 }
