@@ -11,8 +11,6 @@ import { NgForm } from '@angular/forms';
   styleUrl: './features.component.css'
 })
 export class FeaturesComponent {
-
-
 constructor(private router : Router, private featureService : FeatureService) {}
 feature:Feature=new Feature();
  onSubmit(form:NgForm){

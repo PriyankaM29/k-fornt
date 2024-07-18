@@ -15,6 +15,9 @@ import { FeatureDashboardComponent } from './feature-dashboard/feature-dashboard
 
 
 import { FeatureDashboardService } from '../Service/feature-dashboard/feature-dashboard.service';
+import { SprintCreationComponent } from './sprint-creation/sprint-creation.component';
+import { SprintDashboardComponent } from './sprint-dashboard/sprint-dashboard.component';
+import { SprintDashboardService } from '../Service/sprint-dashboard/sprint-dashboard.service';
 
 // import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 
@@ -28,7 +31,9 @@ import { FeatureDashboardService } from '../Service/feature-dashboard/feature-da
     FeaturesComponent,
     DraganddropComponent,
     AddEpicComponent,
-    FeatureDashboardComponent
+    FeatureDashboardComponent,
+    SprintCreationComponent,
+    SprintDashboardComponent
   ],
   imports: [
     CommonModule,
@@ -46,8 +51,9 @@ import { FeatureDashboardService } from '../Service/feature-dashboard/feature-da
     AdminComponent,
     FeaturesComponent,
     DraganddropComponent,
-    FeatureDashboardComponent
+    FeatureDashboardComponent,
+    SprintDashboardComponent
   ],
-  providers:[DragdropService,FeatureDashboardService]
+  providers:[DragdropService,FeatureDashboardService,SprintDashboardService]
 })
 export class ModuleModule { }

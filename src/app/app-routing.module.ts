@@ -8,6 +8,8 @@ import { DraganddropComponent } from './module/draganddrop/draganddrop.component
 import { FeatureDashboardComponent } from './module/feature-dashboard/feature-dashboard.component';
 import { AddEpicComponent } from './module/add-epic/add-epic.component';
 import { features } from 'process';
+import { SprintCreationComponent } from './module/sprint-creation/sprint-creation.component';
+import { SprintDashboardComponent } from './module/sprint-dashboard/sprint-dashboard.component';
 
 const routes: Routes = [
   //admin
@@ -26,6 +28,8 @@ const routes: Routes = [
   {path:'addEpic',component:AddEpicComponent},
 
   {path:'featureFrom',component:FeaturesComponent},
+  {path:'sprintForm',component:SprintCreationComponent},
+  {path:'sprintdashboard',component:SprintDashboardComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
  
 ];

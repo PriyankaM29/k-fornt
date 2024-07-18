@@ -17,14 +17,7 @@
       <label for="description">Description</label>
       <input type="description" id="description" name="description"[(ngModel)]="feature.description" required>
   </div>
-  <div class="form_group">
-    <label for="plannedFor">Planned For</label>
-    <select type="planned for" id="plannedFor" name="plannedFor"[(ngModel)]="feature.plannedFor" required>
-        <option value="sprint1">Sprint 1</option>
-        <option value="sprint2">Sprint 2</option>
-        <option value="pending">Pending</option>
-    </select>
-</div>
+ 
       <div class="form_action">
           <button class="btn" type="submit" [disabled]="form.invalid">Submit</button>
       </div>

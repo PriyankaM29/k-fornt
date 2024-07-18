@@ -1,0 +1,20 @@
+<div class="login_container">
+    <h1>ADD SPRINT</h1>
+    <form (ngSubmit)="onSubmit(form)" #form="ngForm" class="sprint_form">
+        <div class="form_group">
+            <label for="name">Sprint Name</label>
+            <input type="name" name="name" id="name" [(ngModel)]="sprint.sprintName" required>
+        </div>
+        <div class="form_group">
+            <label for="creationDate">Creation Date</label>
+            <input type="creationDate" name="creationDate" id="creationDate" [(ngModel)]="sprint.creationDate" required>
+        </div>
+        <div class="form_group">
+            <label for="dueDate">Due Date</label>
+            <input type="duedate" name="dueDate" id="dueDate" [(ngModel)]="sprint.dueDate" required>
+        </div>
+        <div class="form_action">
+            <button class="btn" type="submit" [disabled]="form.invalid">Submit</button>
+        </div>
+    </form>
+</div>

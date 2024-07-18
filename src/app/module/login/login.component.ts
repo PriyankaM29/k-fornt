@@ -23,11 +23,12 @@ user:User=new User();
  
  
     if(this.user.email==='super@gmail.com' && this.user.password==='asd'){
-      this.router.navigate(['/dragdrop']);
+      
+      this.router.navigate(['/sprintForm']);
     }
     else{
       alert("Login Successfull");
-      this.router.navigate(['/home']);
+      this.router.navigate(['/dragdrop']);
     }
     this.user=data;
     this.userService.setUser(this.user);
