@@ -60,11 +60,11 @@
 }
 
 .right-div {
-    height: 450px;
-    width: 350px;
+    height: 500px;
+    width: 450px;
     text-align: center;
     word-spacing: 10px;
-    line-height: 25px;
+    line-height: 30px;
     background-color: #f9f9f9; /* Optional: Add a background color */
     padding: 15px 15px 15px 15px;
     border-radius: 50px;

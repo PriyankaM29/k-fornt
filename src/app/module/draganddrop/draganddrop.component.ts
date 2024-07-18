@@ -26,7 +26,6 @@ export class DraganddropComponent implements OnInit{
     this.fetchFeatures();
   }
   addButton() {
-    alert("add feature")
      this.router.navigate(['/featureFrom']);
   }
 

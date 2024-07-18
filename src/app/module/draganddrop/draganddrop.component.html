@@ -7,7 +7,9 @@
     [cdkDropListData]="productBacklog" 
     class="list" 
     (cdkDropListDropped)="drop($event, 'pending')">
-      <div class="item" *ngFor="let feature of productBacklog" cdkDrag>{{feature.description}}. {{feature.featureId}}</div>
+      <div class="item" *ngFor="let feature of productBacklog" cdkDrag> 
+        ID:{{feature.featureId}} <br> DESCRIPTION:{{feature.description}}
+      </div>
     </div>
     
   </div>
@@ -18,7 +20,9 @@
     [cdkDropListData]="sprint1" 
     class="list" 
     (cdkDropListDropped)="drop($event, 'sprint 1')">
-      <div class="item" *ngFor="let feature of sprint1" cdkDrag>{{feature.featureId}}. {{feature.description}}</div>
+      <div class="item" *ngFor="let feature of sprint1" cdkDrag>
+      ID:{{feature.featureId}} <br> DESCRIPTION:{{feature.description}}
+    </div>
     </div>
   </div>
  
@@ -28,11 +32,13 @@
     [cdkDropListData]="sprint2" 
     class="list" 
     (cdkDropListDropped)="drop($event, 'sprint 2')">
-      <div class="item" *ngFor="let feature of sprint2" cdkDrag>{{feature.featureId}}. {{feature.description}}</div>
+      <div class="item" *ngFor="let feature of sprint2" cdkDrag>
+        ID:{{feature.featureId}} <br> DESCRIPTION:{{feature.description}}
+      </div>
     </div>
   </div>
 </div>
 <div>
-  <button type="button" class="btn btn-primary btn-lg" routerLink="/featureForm" (click)="addButton()">ADD FEATURE</button>
-
+  <button type="button" class="btn btn-primary btn-lg" 
+  routerLink="/featureForm" (click)="addButton()">ADD FEATURE</button>
 </div>

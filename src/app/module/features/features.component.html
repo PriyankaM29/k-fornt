@@ -1,4 +1,4 @@
-<div class="login_container" style="background-color: aliceblue;">
+<div class="login_container">
   <h1>Add Feature</h1>
   <form (ngSubmit)="onSubmit(form)" #form="ngForm" class="feature_form">
       <div class="form_group">
@@ -19,7 +19,11 @@
   </div>
   <div class="form_group">
     <label for="plannedFor">Planned For</label>
-    <input type="plannedFor" id="plannedFor" name="plannedFor"[(ngModel)]="feature.plannedFor" required>
+    <select type="planned for" id="plannedFor" name="plannedFor"[(ngModel)]="feature.plannedFor" required>
+        <option value="sprint1">Sprint 1</option>
+        <option value="sprint2">Sprint 2</option>
+        <option value="pending">Pending</option>
+    </select>
 </div>
       <div class="form_action">
           <button class="btn" type="submit" [disabled]="form.invalid">Submit</button>

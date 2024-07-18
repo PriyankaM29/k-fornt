@@ -1,7 +1,4 @@
 /* General styles for the body */
-
-
-
 /* Navbar container */
 .navbar {
     background-color:#7DA2A9;
@@ -16,7 +13,8 @@
 .navbar-logo {
     height: 40px; /* Adjust the height as needed */
     width: 60px;
-    margin-right: 125vh; /* Space between the logo and the navigation items */
+    margin-right:160vh; /* Space between the logo and the navigation items */
+    margin-left: 50px;
     padding-top: 1px;
     align-items: left;
 }

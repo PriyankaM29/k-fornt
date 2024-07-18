@@ -14,6 +14,7 @@ import { Router } from '@angular/router';
 
 export class FeatureDashboardComponent implements OnInit{
   features: Feature[] = [];
+  // featureID:Feature[]=[];
 
   constructor(private router:Router,private featureService:FeatureDashboardService ) { }
 

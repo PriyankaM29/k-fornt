@@ -8,7 +8,7 @@
   }
    
   .list {
-    border: 1px solid #ccc;
+    border: 1px solid #80d0db;
     min-height: 300px;
     padding: 10px;
     background:#fff;
@@ -21,7 +21,7 @@
     background: #fff;
     border: 1px solid #ccc;
     cursor: move;
-    background-color:antiquewhite;
+    background-color:rgb(68, 192, 214);
     border-radius:0%;
   }
 .btn{
@@ -29,7 +29,7 @@
   margin-top: 20px;
   margin-left: 500px;
   height: auto;
-  background-color: rgb(110, 166, 179);
+  background-color: rgb(71, 137, 151);
   border-color: rgb(4, 14, 16);
 }
 

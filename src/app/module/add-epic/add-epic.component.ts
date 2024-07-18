@@ -13,7 +13,8 @@ import { FeatureDashboardService } from '../../Service/feature-dashboard/feature
 export class AddEpicComponent implements OnInit{
   epic:Epic=new Epic();
   id!:number;
-  constructor(private epicService:EpicService,private router:Router,private featureService:FeatureDashboardService){}
+  constructor(private epicService:EpicService,private router:Router,
+    private featureService:FeatureDashboardService){}
   ngOnInit(): void {
     
     this.id=this.featureService.get_id();
@@ -26,6 +27,7 @@ export class AddEpicComponent implements OnInit{
       {
         console.log("response from backend",response);
       });
+      this.router.navigate(['/dragdrop']);
   }
 
 }
