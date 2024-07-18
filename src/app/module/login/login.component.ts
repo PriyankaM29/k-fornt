@@ -27,7 +27,6 @@ user:User=new User();
       this.router.navigate(['/sprintForm']);
     }
     else{
-      alert("Login Successfull");
       this.router.navigate(['/dragdrop']);
     }
     this.user=data;

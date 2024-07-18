@@ -7,11 +7,11 @@
         </div>
         <div class="form_group">
             <label for="creationDate">Creation Date</label>
-            <input type="creationDate" name="creationDate" id="creationDate" [(ngModel)]="sprint.creationDate" required>
+            <input type="date" name="creationDate" id="creationDate" [(ngModel)]="sprint.creationDate" required>
         </div>
         <div class="form_group">
             <label for="dueDate">Due Date</label>
-            <input type="duedate" name="dueDate" id="dueDate" [(ngModel)]="sprint.dueDate" required>
+            <input type="date" name="dueDate" id="dueDate" [(ngModel)]="sprint.dueDate" required>
         </div>
         <div class="form_action">
             <button class="btn" type="submit" [disabled]="form.invalid">Submit</button>

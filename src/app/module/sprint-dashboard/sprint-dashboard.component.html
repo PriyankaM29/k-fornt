@@ -1,1 +1,16 @@
-<p>sprint-dashboard works!</p>
+<div>
+    <h1>Sprint Dashboard</h1>
+    <div class="tab" *ngFor="let sprint of sprints">
+        {{sprint.sprintId}}
+        <br>
+        {{sprint.sprintName}}        
+        <br>
+        {{sprint.creationDate}}        
+        <br>
+        {{sprint.dueDate}}        
+        <br>
+        <div>
+            <button class="button" (click)="addSprint()">ADD SPRINT</button>
+        </div>
+    </div>
+</div>

@@ -22,6 +22,7 @@ export class SprintCreationComponent {
   error=>{
     console.log("Error in submitting sprint form",error);
   });
+  this.route.navigate(['/sprintdashboard']);
 
   }
 }
