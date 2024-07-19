@@ -1,16 +1,17 @@
 <div>
     <h1>Sprint Dashboard</h1>
+    <div>
+        <button class="button" (click)="addSprint()">ADD SPRINT</button>
+    </div>
     <div class="tab" *ngFor="let sprint of sprints">
         {{sprint.sprintId}}
         <br>
-        {{sprint.sprintName}}        
+        {{sprint.sprint_Name}}        
         <br>
-        {{sprint.creationDate}}        
+        {{sprint.start_Date}}        
         <br>
-        {{sprint.dueDate}}        
-        <br>
-        <div>
-            <button class="button" (click)="addSprint()">ADD SPRINT</button>
-        </div>
+        {{sprint.end_Date}}        
+    
+        
     </div>
 </div>

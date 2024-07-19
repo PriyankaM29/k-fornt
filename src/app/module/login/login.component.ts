@@ -20,11 +20,9 @@ user:User=new User();
   
   this.userService.loginUser(this.user).subscribe(
     data=>{
- 
- 
     if(this.user.email==='super@gmail.com' && this.user.password==='asd'){
       
-      this.router.navigate(['/sprintForm']);
+      this.router.navigate(['/sprintdashboard']);
     }
     else{
       this.router.navigate(['/dragdrop']);

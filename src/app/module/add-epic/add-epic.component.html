@@ -14,10 +14,10 @@
         <label for="description">Description</label>
         <input type="description" id="description" name="description"[(ngModel)]="epic.description" required>
     </div>
-    <!-- <div class="form_group">
+    <div class="form_group">
       <label for="dueDate">Due Date</label>
-      <input type="dueDate" id="dueDate" name="dueDate"[(ngModel)]="epic.dueDate" required>
-  </div> -->
+      <input type="Date" id="dueDate" name="duedate"[(ngModel)]="epic.duedate" required>
+  </div>
         <div class="form_action">
             <button class="btn" type="submit" [disabled]="form.invalid">Submit</button>
         </div>

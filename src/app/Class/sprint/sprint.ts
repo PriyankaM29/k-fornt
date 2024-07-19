@@ -1,7 +1,7 @@
 export class Sprint {
     sprintId!:number;
-    sprintName!:string;
-    creationDate!:Date;
-    dueDate!:Date;
+    sprint_Name!:string;
+    start_Date!:Date;
+    end_Date!:Date;
 
 }
