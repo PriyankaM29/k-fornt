@@ -3,15 +3,15 @@
     <form (ngSubmit)="onSubmit(form)" #form="ngForm" class="sprint_form">
         <div class="form_group">
             <label for="name">Sprint Name</label>
-            <input type="name" name="sprint_Name" id="sprint_Name" [(ngModel)]="sprint.sprint_Name" required>
+            <input type="name" name="sprintName" id="sprintName" [(ngModel)]="sprint.sprintName" required>
         </div>
         <div class="form_group">
             <label for="creationDate">Creation Date</label>
-            <input type="date" name="start_Date" id="start_date" [(ngModel)]="sprint.start_Date" required>
+            <input type="date" name="startDate" id="startDate" [(ngModel)]="sprint.startDate" required>
         </div>
         <div class="form_group">
             <label for="dueDate">Due Date</label>
-            <input type="date" name="end_Date" id="end_date" [(ngModel)]="sprint.end_Date" required>
+            <input type="date" name="endDate" id="endDate" [(ngModel)]="sprint.endDate" required>
         </div>
         <div class="form_action">
             <button class="btn" type="submit" [disabled]="form.invalid">Submit</button>

@@ -32,8 +32,8 @@ export class DraganddropComponent implements OnInit{
   fetchFeatures() {
     this.featureService.getFeatures().subscribe((features: Feature[]) => {
       this.productBacklog = features.filter(feature => feature.plannedFor === 'pending');
-      this.sprint1 = features.filter(feature => feature.plannedFor === 'sprint 1');
-      this.sprint2 = features.filter(feature => feature.plannedFor === 'sprint 2');
+      this.sprint1 = features.filter(feature => feature.plannedFor === 'sprint1');
+      this.sprint2 = features.filter(feature => feature.plannedFor === 'sprint2');
     });
   }
 

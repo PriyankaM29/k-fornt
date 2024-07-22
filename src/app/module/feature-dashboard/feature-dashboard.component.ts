@@ -1,10 +1,7 @@
-
 import { Component, OnInit } from '@angular/core';
 import { Feature } from '../../Class/Feature/feature';
 import { FeatureDashboardService } from '../../Service/feature-dashboard/feature-dashboard.service';
 import { Router } from '@angular/router';
-
-
 
 @Component({
   selector: 'app-feature-dashboard',
