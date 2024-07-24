@@ -18,6 +18,7 @@ export class DragdropService {
 
   updateFeaturePlannedFor(id: number, plannedFor: string): Observable<any> {
     console.log(id);
+    console.log(plannedFor)
     return this.http.put(`${this.apiUrl1}/${id}`, { plannedFor });
   }
 }

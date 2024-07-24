@@ -16,6 +16,7 @@ feature:Feature=new Feature();
  onSubmit(form:NgForm){
   // console.log(form.value)
   this.feature=form.value;
+  this.feature.plannedFor="pending";
   this.featureService.addFeature(this.feature).subscribe(response=>
     {
       console.log("response from backend",response);

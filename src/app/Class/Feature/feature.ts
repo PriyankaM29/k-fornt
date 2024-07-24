@@ -6,4 +6,5 @@ export class Feature {
     description!:string;
     createdDate!:Date;
     plannedFor!:string;
+    sprintId!:number;
 }

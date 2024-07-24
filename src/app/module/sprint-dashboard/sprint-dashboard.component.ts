@@ -12,18 +12,12 @@ export class SprintDashboardComponent implements OnInit {
   sprints:Sprint[]=[];
 constructor(private router:Router,private sprintService:SprintDashboardService){}
   ngOnInit(): void {
-    this.sprintService.getSprints().subscribe(data=>
-      {
-        console.log(data);
-      } )
-    this.fetchSprints();
-  }
-  fetchSprints(){
     this.sprintService.getSprints().subscribe((data)=>
     {
       this.sprints=data;
     });
   }
+
   addSprint(){
     this.router.navigate(['/sprintForm']);
   }

@@ -3,5 +3,6 @@ export class Sprint {
     sprintName!:string;
     startDate!:Date;
     endDate!:Date;
+    
 
 }
