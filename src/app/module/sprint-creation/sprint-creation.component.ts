@@ -14,15 +14,19 @@ import { response } from 'express';
 export class SprintCreationComponent {
   constructor(private route:Router,private sprintService:SprintService){}
   sprint:Sprint=new Sprint();
+  errorResponse: any;
   onSubmit(form:NgForm){
     this.sprint=form.value;
     this.sprintService.addSprint(this.sprint).subscribe(response=>{
       console.log("Sprint backend response");
+      console.log(response);
+      this.route.navigate(['/sprintdashboard']);
     },
   error=>{
     console.log("Error in submitting sprint form",error);
+    this.errorResponse = error;  // Store the error response
   });
-  this.route.navigate(['/sprintdashboard']);
+ 
 
   }
 }

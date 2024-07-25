@@ -17,4 +17,8 @@
             <button class="btn" type="submit" [disabled]="form.invalid">Submit</button>
         </div>
     </form>
+    <div *ngIf="errorResponse">
+        <p>Error occurred while submitting sprint form:</p>
+        <p>Please select the start date of current sprint atleast 2 or more days after the EndDate of previous sprint </p>
+      </div>
 </div>
