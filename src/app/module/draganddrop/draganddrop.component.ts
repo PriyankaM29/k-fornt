@@ -64,6 +64,7 @@ export class DraganddropComponent implements OnInit{
     this.featureService.updateFeatureSprintId(feature).subscribe(data=>{
      console.log(data);
      
+     
     },
     error=>{
       console.log("error");
