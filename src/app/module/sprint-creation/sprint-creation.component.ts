@@ -17,7 +17,7 @@ export class SprintCreationComponent {
   onSubmit(form:NgForm){
     this.sprint=form.value;
     this.sprintService.addSprint(this.sprint).subscribe(response=>{
-      console.log("Sprint backend response");
+      console.log("Sprint backend response",response);
     },
   error=>{
     console.log("Error in submitting sprint form",error);

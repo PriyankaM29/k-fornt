@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 import { SprintDashboardComponent } from '../sprint-dashboard/sprint-dashboard.component';
 import { Sprint } from '../../Class/sprint/sprint';
 import { SprintDashboardService } from '../../Service/sprint-dashboard/sprint-dashboard.service';
+import { response } from 'express';
 
 @Component({
   selector: 'app-draganddrop',
@@ -19,38 +20,33 @@ export class DraganddropComponent implements OnInit{
   currentSprint: Feature[] = [];
   sprints:Sprint[]=[];
 
+
   currentDate=new Date();
 
   constructor(private router:Router,private featureService: DragdropService,private sprintService:SprintDashboardService){
-      this.sprintService.getSprints().subscribe(data=>{
-        this.sprints=data;
-      });
+  
   }
 
   ngOnInit(): void {
-    this.fetchFeatures();
+    this.sprintService.getSprints().subscribe((sprints:Sprint[]) => {
+      this.sprints= sprints.filter(sprint => new Date(sprint.endDate)>= this.currentDate);
+      console.log(this.currentSprint);
+     });
+      this.featureService.getFeatures().subscribe((feature:Feature[])=>{
+        this.productBacklog=feature.filter(f=>f.sprintId===null);
+      });
   }
   addButton() {
      this.router.navigate(['/featureFrom']);
   }
 
-  fetchFeatures() {
-    this.featureService.getFeatures().subscribe((features: Feature[]) => {
-      this.productBacklog = features.filter(feature => feature.sprintId === null);
-      console.log(this.productBacklog);
-      this.currentSprint = features.filter(feature => {
-        const sprint = this.sprints.find(s => s.sprintId === feature.sprintId);
-          return sprint ;
-        });
-
-
-
-      // this.sprint1 = features.filter(feature => feature.plannedFor === 'current'  );
-      // this.sprint2 = features.filter(feature => feature.plannedFor === 'previous');
-    });
+  getFeaturesForSprint(sprintId:number):Feature[]{
+    
+     const sprint=this.sprints.find(s=>s.sprintId===sprintId);
+      return sprint? sprint.features:[];
   }
 
-  drop(event: CdkDragDrop<Feature[]>, container: string) {
+  drop(event: CdkDragDrop<Feature[]>, sprintId?:number) {
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {
@@ -62,14 +58,26 @@ export class DraganddropComponent implements OnInit{
       );
 
       const feature = event.container.data[event.currentIndex];
-this.updateFeaturePlannedFor(feature.featureId, container);
+      feature.sprintId=sprintId||null;
+      // this.sprintService.getSprints(sprintId);
+      console.log(feature);
+    this.featureService.updateFeatureSprintId(feature).subscribe(data=>{
+     console.log(data);
+     
+    },
+    error=>{
+      console.log("error");
+    });
+
+
+
     }
   }
 
-  updateFeaturePlannedFor(id: number, plannedFor: string) {
-    console.log(plannedFor);
-    this.featureService.updateFeaturePlannedFor(id, plannedFor).subscribe();
-  }
+  // updateFeaturePlannedFor(id: number, plannedFor: string) {
+  //   console.log(plannedFor);
+  //   this.featureService.updateFeaturePlannedFor(id, plannedFor).subscribe();
+  // }
 
 
 

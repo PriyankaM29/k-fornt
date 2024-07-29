@@ -15,6 +15,7 @@ constructor(private router:Router,private sprintService:SprintDashboardService){
     this.sprintService.getSprints().subscribe((data)=>
     {
       this.sprints=data;
+      console.log(this.sprints);
     });
   }
 

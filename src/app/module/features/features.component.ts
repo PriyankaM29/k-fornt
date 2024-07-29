@@ -12,7 +12,7 @@ import { NgForm } from '@angular/forms';
 })
 export class FeaturesComponent {
 constructor(private router : Router, private featureService : FeatureService) {}
-feature:Feature=new Feature();
+feature:Feature=new Feature(null);
  onSubmit(form:NgForm){
   // console.log(form.value)
   this.feature=form.value;

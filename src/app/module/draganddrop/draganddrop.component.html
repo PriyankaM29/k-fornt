@@ -6,7 +6,7 @@
     <div cdkDropList 
     [cdkDropListData]="productBacklog" 
     class="list" 
-    (cdkDropListDropped)="drop($event, 'pending')">
+    (cdkDropListDropped)="drop($event)">
       <div class="item" *ngFor="let feature of productBacklog" cdkDrag> 
         ID:{{feature.featureId}} <br> DESCRIPTION:{{feature.description}}
       </div>
@@ -15,12 +15,12 @@
   </div>
  
   <div class="container" *ngFor="let sprint of sprints">
-    <h3>Sprint {{sprint.sprintId}}</h3>
+    <h3>{{sprint.sprintName}}</h3>
     <div cdkDropList 
-    [cdkDropListData]="currentSprint" 
+    [cdkDropListData]="getFeaturesForSprint(sprint.sprintId)" 
     class="list" 
-    (cdkDropListDropped)="drop($event, 'current')">
-      <div class="item" *ngFor="let feature of currentSprint" cdkDrag>
+    (cdkDropListDropped)="drop($event, sprint.sprintId)">
+      <div class="item" *ngFor="let feature of getFeaturesForSprint(sprint.sprintId)" cdkDrag>
       ID:{{feature.featureId}} <br> DESCRIPTION:{{feature.description}}
     </div>
     </div>
