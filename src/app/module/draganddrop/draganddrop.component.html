@@ -25,19 +25,23 @@
     </div>
     </div>
   </div>
- 
-  <!-- <div class="container">
-    <h3>Sprint 2</h3>
+ <div >
+  <button type="button" class="btn btn-primary btn-lg" (click)="viewprevious()">Click To View Previous Sprints</button>
+ </div>
+ <div *ngIf="flag">
+  <div class="container" *ngFor="let sprint of previousSprint">
+    <h3>{{sprint.sprintName}}</h3>
     <div cdkDropList 
-    [cdkDropListData]="sprint2" 
+    [cdkDropListData]="getpreviousSprintFeatures(sprint.sprintId)" 
     class="list" 
-    (cdkDropListDropped)="drop($event, 'sprint 2')">
-      <div class="item" *ngFor="let feature of sprint2" cdkDrag>
-        ID:{{feature.featureId}} <br> DESCRIPTION:{{feature.description}}
-      </div>
+    (cdkDropListDropped)="drop($event, sprint.sprintId)">
+      <div class="item" *ngFor="let feature of getpreviousSprintFeatures(sprint.sprintId)" cdkDrag>
+     <s> ID:{{feature.featureId}} <br> DESCRIPTION:{{feature.description}}</s>
     </div>
-  </div> -->
-</div>
+    </div>
+  </div>
+</div></div>
+
 <div>
   <button type="button" class="btn btn-primary btn-lg" 
   routerLink="/featureForm" (click)="addButton()">ADD FEATURE</button>

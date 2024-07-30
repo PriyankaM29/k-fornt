@@ -18,8 +18,9 @@ import { response } from 'express';
 export class DraganddropComponent implements OnInit{
   productBacklog: Feature[] = [];
   currentSprint: Feature[] = [];
-  previousSprint:Feature[]=[];
+  previousSprint:Sprint[]=[];
   sprints:Sprint[]=[];
+  flag:boolean=false;
 
 
   currentDate=new Date();
@@ -35,6 +36,10 @@ export class DraganddropComponent implements OnInit{
       this.sprints= sprints.filter(sprint => new Date(sprint.endDate)>= this.currentDate);
       console.log(this.currentSprint);
      });
+     this.sprintService.getSprints().subscribe((previousSprint:Sprint[]) => {
+      this.previousSprint= previousSprint.filter(sprint => new Date(sprint.endDate)< this.currentDate);
+      console.log(this.currentSprint);
+     });
       this.featureService.getFeatures().subscribe((feature:Feature[])=>{
         this.productBacklog=feature.filter(f=>f.sprintId===null);
       });
@@ -42,11 +47,19 @@ export class DraganddropComponent implements OnInit{
   addButton() {
      this.router.navigate(['/featureFrom']);
   }
+  viewprevious(){
+    this.flag=true;
+  }
 
   getFeaturesForSprint(sprintId:number):Feature[]{
     
      const sprint=this.sprints.find(s=>s.sprintId===sprintId);
       return sprint? sprint.features:[];
+  }
+  getpreviousSprintFeatures(sprintId:number):Feature[]{
+    const sprint=this.previousSprint.find(s=>s.sprintId===sprintId);
+    return sprint? sprint.features:[];
+
   }
 
   drop(event: CdkDragDrop<Feature[]>, sprintId?:number) {
