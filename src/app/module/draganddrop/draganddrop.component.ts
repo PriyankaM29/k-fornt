@@ -18,11 +18,12 @@ import { response } from 'express';
 export class DraganddropComponent implements OnInit{
   productBacklog: Feature[] = [];
   currentSprint: Feature[] = [];
+  previousSprint:Feature[]=[];
   sprints:Sprint[]=[];
 
 
   currentDate=new Date();
-  sprint:Sprint|null=null;
+  sprint!:Sprint;
  
 
   constructor(private router:Router,private featureService: DragdropService,private sprintService:SprintDashboardService){
@@ -62,8 +63,8 @@ export class DraganddropComponent implements OnInit{
       const feature = event.container.data[event.currentIndex];
       feature.sprintId=sprintId||null;
       console.log(this.sprint);
-      if(this.sprint==null){
-        this.featureService.updateFeatureSprintId(feature.featureId, this.sprint).subscribe(
+      if(sprintId==null){
+        this.featureService.updateFeatureSprintId(feature.featureId,null).subscribe(
           data => {
             console.log("This is the updated feature according to sprint:", data);
           },
