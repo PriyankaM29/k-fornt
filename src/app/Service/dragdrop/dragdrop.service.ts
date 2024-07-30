@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Feature } from '../../Class/Feature/feature';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Sprint } from '../../Class/sprint/sprint';
 
 @Injectable({
   providedIn: 'root'
@@ -21,9 +22,11 @@ export class DragdropService {
   //   console.log(plannedFor)
   //   return this.http.put(`${this.apiUrl1}/${id}`, { plannedFor });
   // }
-  updateFeatureSprintId(feature:Feature):Observable<any>{
-    console.log(feature);
-    return this.http.put(`${this.apiUrl1}`,feature);
+  updateFeatureSprintId(featureId:number,sprint:any):Observable<any>{
+    console.log("This is a feature id sent to service"+featureId);
+    console.log("this is a sprint sent to service"+sprint);
+    console.log(sprint);
+    return this.http.put(`${this.apiUrl1}/${featureId}`,sprint);
 
   }
 }

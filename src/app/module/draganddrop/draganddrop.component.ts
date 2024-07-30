@@ -22,6 +22,8 @@ export class DraganddropComponent implements OnInit{
 
 
   currentDate=new Date();
+  sprint:Sprint|null=null;
+ 
 
   constructor(private router:Router,private featureService: DragdropService,private sprintService:SprintDashboardService){
   
@@ -59,21 +61,47 @@ export class DraganddropComponent implements OnInit{
 
       const feature = event.container.data[event.currentIndex];
       feature.sprintId=sprintId||null;
-      // this.sprintService.getSprints(sprintId);
+      console.log(this.sprint);
+      if(this.sprint==null){
+        this.featureService.updateFeatureSprintId(feature.featureId, this.sprint).subscribe(
+          data => {
+            console.log("This is the updated feature according to sprint:", data);
+          },
+          error => {
+            console.log("Error in updating the feature sprint ID");
+          }
+        );
+
+      }
+      else{
+      this.sprintService.getsprintbyId(sprintId).subscribe(
+        data => {
+          this.sprint = data;
+          console.log("This is the sprint fetched from backend:");
+          console.log(this.sprint);
+  
+          // Move the updateFeatureSprintId call here
+          this.featureService.updateFeatureSprintId(feature.featureId, this.sprint).subscribe(
+            data => {
+              console.log("This is the updated feature according to sprint:", data);
+            },
+            error => {
+              console.log("Error in updating the feature sprint ID");
+            }
+          );
+        },
+        error => {
+          console.log("Error in fetching the sprint");
+        }
+      );
+  
       console.log(feature);
-    this.featureService.updateFeatureSprintId(feature).subscribe(data=>{
-     console.log(data);
-     
-     
-    },
-    error=>{
-      console.log("error");
-    });
+    }}
+  }}
 
 
 
-    }
-  }
+
 
   // updateFeaturePlannedFor(id: number, plannedFor: string) {
   //   console.log(plannedFor);
@@ -82,7 +110,7 @@ export class DraganddropComponent implements OnInit{
 
 
 
-}
+
 
 
   

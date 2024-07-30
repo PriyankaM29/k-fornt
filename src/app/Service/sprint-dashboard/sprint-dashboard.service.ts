@@ -8,9 +8,14 @@ import { Sprint } from '../../Class/sprint/sprint';
 })
 export class SprintDashboardService {
   private apiUrl='http://localhost:8080/kap/getSprint';
+  private apiURL="http://localhost:8080/kap/getsprintbyId";
   constructor(private http:HttpClient){ }
   getSprints():Observable<Sprint[]> {
     return this.http.get<Sprint[]>(`${this.apiUrl}`);
+  }
+  getsprintbyId(sprintId:any):Observable<Sprint>{
+    console.log("This is sprintID"+sprintId);
+    return this.http.get<Sprint>(`${this.apiURL}/${sprintId}`);
   }
 
 }
