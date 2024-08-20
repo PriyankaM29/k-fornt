@@ -48,7 +48,7 @@ export class DraganddropComponent implements OnInit{
      this.router.navigate(['/featureFrom']);
   }
   viewprevious(){
-    this.flag=true;
+    this.flag=!this.flag;
   }
 
   getFeaturesForSprint(sprintId:number):Feature[]{

@@ -8,13 +8,12 @@ import { Sprint } from '../../Class/sprint/sprint';
   providedIn: 'root'
 })
 export class DragdropService {
-  private apiUrl = 'http://localhost:8080/kap/getfeature';
-  private apiUrl1 = 'http://localhost:8080/kap/updateFeature';
+  private apiUrl = 'http://localhost:8080/tpm/updateFeature';
  
   constructor(private http: HttpClient) { }
 
   getFeatures(): Observable<Feature[]> {
-    return this.http.get<Feature[]>('http://localhost:8080/kap/getfeature');
+    return this.http.get<Feature[]>('http://localhost:8080/tpm/getfeature');
   }
 
   // updateFeaturePlannedFor(id: number, plannedFor: string): Observable<any> {
@@ -26,7 +25,7 @@ export class DragdropService {
     console.log("This is a feature id sent to service"+featureId);
     console.log("this is a sprint sent to service"+sprint);
     console.log(sprint);
-    return this.http.put(`${this.apiUrl1}/${featureId}`,sprint);
+    return this.http.put(`${this.apiUrl}/${featureId}`,sprint);
 
   }
 }

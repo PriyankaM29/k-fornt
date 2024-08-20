@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { ModuleModule } from './module/module.module';
 import { HomeComponent } from './module/home/home.component';
 import { FeatureDashboardComponent } from './module/feature-dashboard/feature-dashboard.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HeaderInterceptor } from './Interceptor/header.interceptor';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { FeatureDashboardComponent } from './module/feature-dashboard/feature-da
     
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    { provide: HTTP_INTERCEPTORS, useClass: HeaderInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })

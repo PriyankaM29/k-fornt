@@ -2,12 +2,19 @@
     <h1>Login</h1>
     <form (ngSubmit)="onSubmit(form)" #form="ngForm" class="login_form">
         <div class="form_group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" [(ngModel)]="user.email" required>
+            <label for="username">Email</label>
+            <input type="username" id="username" name="username" [(ngModel)]="user.username" required>
         </div>
         <div class="form_group">
             <label for="password">Password</label>
             <input type="password" id="password" name="password"[(ngModel)]="user.password" required>
+        </div>
+        <div class="form_group">
+            <label for="role">Role</label>
+            <select type="role" id="role" name="role" [(ngModel)]="user.role" required>
+                <option>TPM</option>
+                <option>ADMIN</option>
+                </select>
         </div>
         <div class="form_action">
             <button class="btn" type="submit" [disabled]="form.invalid">Submit</button>

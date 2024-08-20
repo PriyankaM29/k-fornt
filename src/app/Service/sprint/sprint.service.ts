@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SprintService {
-  private baseURL="http://localhost:8080/kap/createSprint";
+  private baseURL="http://localhost:8080/tpm/createSprint";
   constructor(private httpClient:HttpClient){}
   addSprint(sprint: Sprint):Observable<any> {
     return this.httpClient.post(`${this.baseURL}`,sprint);

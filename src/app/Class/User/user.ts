@@ -1,8 +1,7 @@
 export class User {
-    empId!:number;
-    firstName!:string;
-    lastName!:string;
-    email!:string;
+    Id!:number;
+    username!:string;
     password!:string;
+    role!:string;
 
 }
